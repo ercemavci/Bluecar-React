@@ -55,7 +55,7 @@ class searchblock extends Component {
     }
   }
   componentDidMount() {
-    axios.get(`https://blueapi.cf/Home/AllLocations`)
+    axios.get('https://blueapi.cf/Home/AllLocations')
       .then(res => {
         const data = res.data;
         this.setState({ data });
