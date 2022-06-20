@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext&display=swap);
+
+.tabs-container .tabs-nav-container {
+    padding: 10px 5px 0
+}
+
+.ant-list-item
+{
+    background-color: gray;
+    margin: 17px;
+
+}
+
+.absolute-left, .mobile-nav-menu-wrapper .mobile-nav-menu, .mobile-nav-menu-wrapper .open-menu.opened .menu:after, .mobile-nav-menu-wrapper .open-menu.opened .menu:before {
+    left: 0;
+    position: absolute;
+}
+.tabs-container .tabs-nav-container .tabs-tab-next,
+.tabs-container .tabs-nav-container .tabs-tab-prev {
+    display: none;
+    user-select: none
+}
+
+.tabs-container .tabs-nav-container .tabs-wrap .tabs-nav {
+    display: flex;
+    justify-content: space-between;
+    transition: transform .3s
+}
+
+.tabs-container .tabs-tab {
+    white-space: nowrap
+}
+
+.tabs-container .tabs-tabpane {
+    height: 0;
+    overflow: hidden
+}
+
+.tabs-container .tabs-tabpane-active {
+    height: auto;
+    overflow: visible
+}
+
+.tabs-container .tabs-content {
+    margin-top: 10px
+}
+
+.tabs-container .tabs-nav-container.primary {
+    background: #fff;
+    border: 1px solid #d2dae4
+}
+
+.tabs-container .tabs-nav-container.primary .tabs-nav .tabs-tab {
+    cursor: pointer;
+    padding: 0 10px 5px
+}
+
+.tabs-container .tabs-nav-container.primary .tabs-nav .tabs-tab-active {
+    border-bottom: 4px solid #1148ad;
+    font-weight: 700
+}
+
+.tabs-container .tabs-nav-container.secondary {
+    background: #f8f8f8
+}
+
+.tabs-container .tabs-nav-container.secondary .tabs-tab {
+    background: #fbfbfb;
+    border-radius: 4px 4px 0 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    transition: background .3s;
+    width: 100%
+}
+
+.tabs-container .tabs-nav-container.secondary .tabs-tab a {
+    color: #8a8a8a;
+    display: block;
+    height: 100%
+}
+
+.tabs-container .tabs-nav-container.secondary .tabs-tab.tabs-tab-active {
+    background: #fff
+}
+
+.tabs-container .tabs-nav-container.secondary .tabs-tab.tabs-tab-active a {
+    color: #333
+}
+
+.tabs-container .tabs-nav-container.secondary .tabs-tab:hover {
+    background: #ececec
+}
+
+@media screen and (max-width:825px) {
+    .tabs-container .tabs-nav-container {
+        padding-left: 32px;
+        padding-right: 32px;
+        position: relative
+    }
+
+    .tabs-container .tabs-nav-container .tabs-tab-next,
+    .tabs-container .tabs-nav-container .tabs-tab-prev {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        text-align: center;
+        width: 32px
+    }
+
+    .tabs-container .tabs-nav-container .tabs-tab-prev {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .tabs-container .tabs-nav-container .tabs-tab-next {
+        right: 2px;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .tabs-container .tabs-nav-container .tabs-tab-next.tabs-tab-visible,
+    .tabs-container .tabs-nav-container .tabs-tab-prev.tabs-tab-visible {
+        display: none
+    }
+
+    .tabs-container .tabs-nav-container .tabs-wrap {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%
+    }
+
+    .tabs-container .tabs-nav-container .tabs-wrap .tabs-nav {
+        display: block;
+        width: 100%
+    }
+
+    .tabs-container .tabs-nav-container .tabs-wrap .tabs-nav .tabs-tab {
+        display: inline-block;
+        text-align: center;
+        width: 100%
+    }
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.align-flex {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.titles {
+    font-weight: 700;
+    line-height: 1
+}
+
+.outline {
+    border: none;
+    outline: none
+}
+
+.absolute {
+    display: block;
+    position: absolute
+}
+
+.absolute-left {
+    left: 0;
+    position: absolute
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0
+}
+
+.popular-destination-wrapper {
+    background: #eff1f3;
+    padding: 30px 0
+}
+
+.popular-destination-wrapper .popular-destination {
+    margin: 0 auto;
+    width: 1100px
+}
+
+.popular-destination-wrapper .popular-destination h6.popular-destination-title {
+    font-family: PT Sans;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 12px 10px;
+    width: calc(100% - 20px)
+}
+
+.popular-destination-wrapper .popular-destination .popular-destination-tabs {
+    margin: 0 10px
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider .carousel-image {
+    cursor: pointer;
+    height: 200px;
+    margin: 0 auto;
+    max-height: 195px;
+    max-width: 353px;
+    position: relative;
+    width: 350px
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider .carousel-image .carousel-image-inner {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider .carousel-image img {
+    border: 1px solid #d2dae4 !important
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider span {
+    bottom: 10px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    left: 15px;
+    position: absolute
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider ul.slick-dots {
+    bottom: inherit;
+    height: inherit;
+    padding: 9px 11px 0;
+    position: relative
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider ul.slick-dots li {
+    margin: 0 4px
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider ul.slick-dots li button {
+    border-radius: 50%;
+    height: 10px;
+    opacity: 1;
+    width: 10px
+}
+
+.popular-destination-wrapper .popular-destination .carousel .ant-carousel .slick-slider ul.slick-dots li.slick-active button {
+    background: #8d9296
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports {
+    background: #fff;
+    border: 1px solid #d2dae4;
+    margin-top: 10px;
+    padding: 10px 15px 20px
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports .ant-list-item {
+    margin-bottom: 0
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports a {
+    align-items: center;
+    color: #333;
+    display: flex;
+    font-size: 13px;
+    padding: 5px 10px
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports a:hover {
+    color: #328ce5;
+    text-decoration: underline
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports .block {
+    padding-bottom: 30px
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports .block .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 10px
+}
+
+.popular-destination-wrapper .popular-destination .cities-airports .block span {
+    margin-left: 10px
+}
+
+@media screen and (max-width:1110px) {
+    .popular-destination-wrapper>.popular-destination {
+        margin: 0 5px;
+        width: calc(100% - 10px)
+    }
+}
+
+@media screen and (max-width:960px) {
+    .popular-destination-wrapper>.popular-destination>a>.popular-destination-content span.car {
+        background-size: 80px 56px;
+        width: 80px
+    }
+
+    .popular-destination-wrapper>.popular-destination>a>.popular-destination-content address>span {
+        padding-left: 80px
+    }
+}
+
+@media screen and (max-width:825px) {
+    .cities-airports .ant-col-8 {
+        width: 49%
+    }
+}
+
+@media screen and (max-width:640px) {
+    .cities-airports .ant-col-8 {
+        width: 100%
+    }
+}

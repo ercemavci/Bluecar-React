@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="js/start.js"></script>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="css/styles-a90570d0b106c74fe6d0.chunk.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://otocarrental.com/assets/plugin/components/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+  <link rel="stylesheet" href="https://otocarrental.com/assets/plugin/datepicker-in-fullscreen.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+  <title>BlueCar App</title>
+</head>
+
+<body>
+  <div id="__next">
+    <div class="app">
+      <div id="header"></div>
+      <div class="home-page-wrapper undefined">
+        <div id="root"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script src="https://otocarrental.com/assets/plugin/datepicker-in-fullscreen.js"></script>
+  <script
+    src="https://otocarrental.com/assets/plugin/components/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+  <script
+    src="https://otocarrental.com/assets/plugin/components/bootstrap-datepicker/locales/bootstrap-datepicker.tr.min.js"></script>
+  <script src="https://otocarrental.com/assets/plugin/components/moment/moment.min.js"></script>
+  <script src="https://otocarrental.com/assets/plugin/components/TouchSwipe/jquery.touchSwipe.min.js"></script>
+
+
+</body>
+<script>
+  function alisFunc() {
+    $('#alistarih').datepickerInFullscreen({
+      template: '<div class="datepicker-in-fullscreen-modal really-big"> ' +
+        ' <div class="datepicker-in-fullscreen-content"> ' +
+        ' <div class="datepicker-in-fullscreen"></div> ' +
+        ' <div class="datepicker-in-fullscreen-controls"> ' +
+        '<a style="width: 100%;}" class="dpifs-close">{{close}}</a> ' +
+        ' </div> ' +
+        ' </div> ' +
+        ' </div> ' +
+        ' <div class="datepicker-in-fullscreen-background dpifs-inverted-colors"></div> ',
+      format: 'DD.MM.YYYY',
+      fakeInputFormat: 'DD.MM.YYYY',
+      datepicker: { language: 'tr' },
+      closeWord: 'Kapat',
+      beforeOpen: function (modal, settings) {
+        var todayDate = new Date().getDate();
+        var from_date = moment($('#alistarih').val(), 'DD.MM.YYYY');
+        var selectdate = new Date(new Date().setDate(todayDate + 1));
+        settings.datepicker.startDate = selectdate;
+      },
+      onChange: function (modal, settings) {
+        const from_date = moment($('#alistarih').val(), 'DD.MM.YYYY');
+        let newdate = new Date(from_date);
+        newdate.setDate(newdate.getDate() + 3);
+        var month = pad2(newdate.getMonth() + 1);
+        var day = pad2(newdate.getDate());
+        var year = newdate.getFullYear();
+        var formattedDate = day + "." + month + "." + year;
+        $("#donustarih").val(formattedDate);
+      },
+    });
+  }
+  function teslimFunc() {
+    $('#donustarih').datepickerInFullscreen({
+      template: '<div class="datepicker-in-fullscreen-modal really-big"> ' +
+        ' <div class="datepicker-in-fullscreen-content"> ' +
+        ' <div class="datepicker-in-fullscreen"></div> ' +
+        ' <div class="datepicker-in-fullscreen-controls"> ' +
+        '<a style="width: 100%;}" class="dpifs-close">{{close}}</a> ' +
+        ' </div> ' +
+        ' </div> ' +
+        ' </div> ' +
+        ' <div class="datepicker-in-fullscreen-background dpifs-inverted-colors"></div> ',
+      format: 'DD.MM.YYYY',
+      fakeInputFormat: 'DD.MM.YYYY',
+      datepicker: { language: 'tr' },
+      closeWord: 'Kapat',
+      beforeOpen: function (modal, settings) {
+        var todayDate = new Date().getDate();
+        var from_date = moment($('#teslimtarih').val(), 'DD.MM.YYYY');
+        var selectdate = new Date(new Date().setDate(todayDate + 1));
+        settings.datepicker.startDate = selectdate;
+      }
+    });
+  }
+  function selectpicker() {
+    $('#alisyeri').select2({
+      placeholder: "Alış Yeri Seçiniz",
+      width: '100%'
+    });
+    $('#donusyeri').select2({
+      placeholder: "Dönüş Yeri Seçiniz",
+      width: '100%'
+    });
+    $("#alisyeri").val('').change();
+    $("#donusyeri").val('').change();
+    $('#alisyeri').on("select2:select", function (e) {
+      $('#donusyeri').val($(this).val()).trigger('change');
+    });
+  }
+  function pad2(n) {
+    return (n < 10 ? '0' : '') + n;
+  }
+
+</script>
+</html>

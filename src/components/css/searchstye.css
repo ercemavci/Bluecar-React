@@ -1,0 +1,23 @@
+.rbt-input-main{
+    height:50px ;
+    float:left;
+    margin-right: 3px;
+}
+#alisdiv
+{
+    float: left;
+    width: 50%;
+}
+#donusdiv
+{
+    float: left;
+    width: 50%;
+}
+
+.bcrm-search-block-wrapper .bcrm-search-block .ant-row-flex .pickup-date, .bcrm-search-block-wrapper .bcrm-search-block .ant-row-flex .pickup-time, .bcrm-search-block-wrapper .bcrm-search-block .ant-row-flex .return-date, .bcrm-search-block-wrapper .bcrm-search-block .ant-row-flex .return-time
+{
+
+}
+.bcrm-show-price {
+width: 100% !important;
+}
