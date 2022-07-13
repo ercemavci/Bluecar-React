@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-Live: https://bluecar.sereryazilim.com/
+Live: https://paply.org/842
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
